@@ -52,54 +52,54 @@ class Application:
         self.root = tk.Tk()
         self.root.title("Sign language to Text Converter")
         self.root.protocol('WM_DELETE_WINDOW', self.destructor)
-        self.root.geometry("900x1100")
+        self.root.geometry("900x900")
         self.panel = tk.Label(self.root)
-        self.panel.place(x = 135, y = 10, width = 640, height = 640)
+        self.panel.place(x = 50, y = 3, width = 640, height = 640)
         self.panel2 = tk.Label(self.root) # initialize image panel
-        self.panel2.place(x = 460, y = 95, width = 310, height = 310)
+        self.panel2.place(x = 380, y = 83, width = 310, height = 310)
         
         self.T = tk.Label(self.root)
-        self.T.place(x=31,y = 17)
+        self.T.place(x=31,y = 7)
         self.T.config(text = "Sign Language to Text",font=("courier",20,"bold"))
         self.panel3 = tk.Label(self.root) # Current SYmbol
-        self.panel3.place(x = 460,y=600)
+        self.panel3.place(x = 460,y=570)
         self.T1 = tk.Label(self.root)
-        self.T1.place(x = 10,y = 600)
+        self.T1.place(x = 10,y = 570)
         self.T1.config(text="Character :",font=("Courier",20,"bold"))
         self.panel4 = tk.Label(self.root) # Word
-        self.panel4.place(x = 220,y=620)
+        self.panel4.place(x = 220,y=590)
         self.T2 = tk.Label(self.root)
-        self.T2.place(x = 10,y = 620)
+        self.T2.place(x = 10,y = 590)
         self.T2.config(text ="Word :",font=("Courier",20,"bold"))
         self.panel5 = tk.Label(self.root) # Sentence
-        self.panel5.place(x = 350,y=760)
+        self.panel5.place(x = 350,y=610)
         self.T3 = tk.Label(self.root)
-        self.T3.place(x = 10,y = 760)
+        self.T3.place(x = 10,y = 610)
         self.T3.config(text ="Sentence :",font=("Courier",20,"bold"))
 
         self.T4 = tk.Label(self.root)
-        self.T4.place(x = 250,y = 820)
+        self.T4.place(x = 250,y = 630)
         self.T4.config(text = "Suggestions",fg="red",font = ("Courier",20,"bold"))
 
-        self.btcall = tk.Button(self.root,command = self.action_call,height = 0,width = 0)
-        self.btcall.config(text = "About",font = ("Courier",14))
-        self.btcall.place(x = 825, y = 0)
+        # self.btcall = tk.Button(self.root,command = self.action_call,height = 0,width = 0)
+        # self.btcall.config(text = "About",font = ("Courier",14))
+        # self.btcall.place(x = 825, y = 0)
 
         self.bt1=tk.Button(self.root, command=self.action1,height = 0,width = 0)
-        self.bt1.place(x = 26,y=890)
+        self.bt1.place(x = 26,y=660)
         #self.bt1.grid(padx = 10, pady = 10)
         self.bt2=tk.Button(self.root, command=self.action2,height = 0,width = 0)
-        self.bt2.place(x = 325,y=890)
+        self.bt2.place(x = 70,y=660)
         #self.panel3.place(x = 10,y=660)
         # self.bt2.grid(row = 4, column = 1, columnspan = 1, padx = 10, pady = 10, sticky = tk.NW)
         self.bt3=tk.Button(self.root, command=self.action3,height = 0,width = 0)
-        self.bt3.place(x = 625,y=890)
+        self.bt3.place(x = 110,y=660)
         # self.bt3.grid(row = 4, column = 2, columnspan = 1, padx = 10, pady = 10, sticky = tk.NW)
         self.bt4=tk.Button(self.root, command=self.action4,height = 0,width = 0)
-        self.bt4.place(x = 125,y=950)
+        self.bt4.place(x = 160,y=660)
         # self.bt4.grid(row = bt1, column = 0, columnspan = 1, padx = 10, pady = 10, sticky = tk.N)
         self.bt5=tk.Button(self.root, command=self.action5,height = 0,width = 0)
-        self.bt5.place(x = 425,y=950)
+        self.bt5.place(x = 210,y=660)
         # self.bt5.grid(row = 5, column = 1, columnspan = 1, padx = 10, pady = 10, sticky = tk.N)
         self.str=""
         self.word=""
@@ -273,18 +273,18 @@ class Application:
     def action_call(self) :
         
         self.root1 = tk.Toplevel(self.root)
-        self.root1.title("About")
-        self.root1.protocol('WM_DELETE_WINDOW', self.destructor1)
-        self.root1.geometry("900x900")
+        # self.root1.title("About")
+        # self.root1.protocol('WM_DELETE_WINDOW', self.destructor1)
+        # self.root1.geometry("900x900")
         
         # img = cv2.imread("Pictures/sir.jpg", 1)
         # # img = cv2.resize(img, (300, 300))
         # cv2.imwrite("Pictures/sir.png", img)
         # return 
         
-        self.tx = tk.Label(self.root1)
-        self.tx.place(x = 330,y = 20)
-        self.tx.config(text = "Efforts By", fg="red", font = ("Courier",30,"bold"))
+        # self.tx = tk.Label(self.root1)
+        # self.tx.place(x = 330,y = 20)
+        # self.tx.config(text = "Efforts By", fg="red", font = ("Courier",30,"bold"))
 
 
 print("Starting Application...")

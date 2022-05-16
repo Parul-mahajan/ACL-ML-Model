@@ -69,7 +69,6 @@ classifier.fit_generator(
         validation_data=test_set,
         validation_steps=4268)# No of images in test set
 
-
 # Saving the model
 model_json = classifier.to_json()
 with open("model-bw.json", "w") as json_file:
